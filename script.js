@@ -8,6 +8,7 @@ function menuToggle() {
 }
 // Nav scripts end here
 
+// Get a randon number for the generators
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -171,11 +172,14 @@ function pickRandomOption(selectId, options) {
   element.value = options[randomIndex];
 }
 
-function pickRandomGender() {
-  const randomGenderIndex = getRandomInt(0, genders.length);
-  const element = document.getElementById("genders");
-  console.log({ randomGenderIndex, element });
-  element.value = genders[randomGenderIndex];
+function pickRandomName() {
+  const randomForenameIndex = getRandomInt(0, forenames.length);
+  const randomSurnameIndex = getRandomInt(0, surnames.length);
+  const forename = forenames[randomForenameIndex];
+  const surname = surnames[randomSurnameIndex];
+  const randomFullName = `${forename} ${surname}`
+  const element = document.getElementById('characterName');
+  element.value = randomFullName;
 }
 
 initialiseSelect("genders", genders, "Gender");

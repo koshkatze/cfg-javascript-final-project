@@ -12,22 +12,7 @@ body {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	height: 100%;
-	width: 100%;
-}
-
-#page-container {
-	background-image: url("images/valley.jpg");
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	height: 100%;
-	width: 100%;
-
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content: center;
-	align-items: center;
+	background-attachment: fixed;
 }
 
 #main-content {
@@ -35,9 +20,25 @@ body {
 	border:5px double #27587c;
 	border-radius: 5px;
 	background: rgba(255, 255, 255, 0.5);
-	margin: auto;
+	margin-top: 2em;
+	margin-left: auto;
+	margin-right: auto;
 	width: 50%;
-	min-height: 50%;
+	height: auto;
+	position: relative;
+}
+
+#character-sheet {
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border:5px double #27587c;
+	border-radius: 5px;
+	background: rgba(255, 255, 255, 0.5);
+	margin-top: 2em;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 2em;
+	width: 50%;
+	height: auto;
 	position: relative;
 }
 
@@ -59,14 +60,7 @@ body {
 	margin: 10px;
 	text-align: center;
 	border: 1px solid green;
-	font-family: "Amatic SC", cursive;
-}
-
-#input-fields-container h4,
-h5 {
-	font-family: "Amatic SC", cursive;
-	font-weight:bolder;
-	padding-top:9px;
+	font-family: 'Bellota', cursive;
 }
 
 #avatar-img {
