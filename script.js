@@ -177,8 +177,8 @@ function pickRandomName() {
   const randomSurnameIndex = getRandomInt(0, surnames.length);
   const forename = forenames[randomForenameIndex];
   const surname = surnames[randomSurnameIndex];
-  const randomFullName = `${forename} ${surname}`
-  const element = document.getElementById('characterName');
+  const randomFullName = `${forename} ${surname}`;
+  const element = document.getElementById("characterName");
   element.value = randomFullName;
 }
 
@@ -188,3 +188,5 @@ initialiseSelect("races", races, "Race");
 initialiseSelect("classes", classes, "Class");
 initialiseSelect("backgrounds", backgrounds, "Background");
 initialiseSelect("alignments", alignments, "Alignment");
+
+// Character sheet JS starts here
