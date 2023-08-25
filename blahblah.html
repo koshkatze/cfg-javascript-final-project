@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>D&D Character Generator</title>
+	<!-- FONTS -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Catamaran&family=Pathway+Extreme:ital,opsz,wght@0,8..144,100;0,8..144,200;0,8..144,300;0,8..144,400;0,8..144,500;0,8..144,600;0,8..144,700;0,8..144,800;0,8..144,900;1,8..144,100;1,8..144,200;1,8..144,300;1,8..144,400;1,8..144,500;1,8..144,600;1,8..144,700;1,8..144,800;1,8..144,900&display=swap"
+		rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+		rel="stylesheet" />
+	<!-- BOOTSTRAP -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+		crossorigin="anonymous"></script>
+	<!-- ICONS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+		integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- JS -->
+	<script src="script.js"></script>
+	<!-- CSS -->
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="page-container">
+		<div id="main-content">
+			<div id="title">
+				<h1>D&D Character Generator</h1>
+			</div>
+
+
+<div id="main-body" class="container flexbox">
+    <div class="avatar-container row-cols-12">
+        <img id="avatar-img" src="images/default-avatar.png" />
+    </div>
+    <div id="character-name" class="input-field row">
+        <input onclick="this.placeholder=''" onblur="this.placeholder='Character Name'" type="text" id="name-id"
+            title="Character Name" placeholder="Character Name" class="col-7" />
+        <button class="randomiser-button col-3" title="Toggle Random"><i class="fa-solid fa-dice"></i></button>
+    </div>
+    <div id="input-fields-container container">
+        <!-- section to expand/collapse -->
+        <div id="view-sheet-container row-cols-12">
+            <button id="view-sheet-button">View Character</button>
+        </div>
+        <div id="randomise-all-container row-cols-12">
+            <span id="random-button-span"><button id="randomise-all-button" title="Randomise All"><i
+                        class="fa-solid fa-dice"></i> <span id="all">All</span></button></span>
+        </div>
+        <div id="randomise-header row-cols-12">
+            <h4>Randomise <i class="fa-solid fa-circle-question"
+                    title="Select specifics from the drop down menus or click the dice to toggle random"></i></h4>	<!-- right align -->
+        </div>
+        <div id="gender" class="input-field row">
+            <select name="genders" id="gender-id" class="col-7">
+                <option value="none" selected class="default-option">Random Gender</option>
+                <option value="female">Female</option>
+                <option value="male">Male</option>
+                <option value="non-binary">Non-binary</option>
+            </select>
+            <button class="randomiser-button" title="Toggle Random"><i class="fa-solid fa-dice col-3"></i></button>
+        </div>
+
+        <div id="level" class="input-field">
+            <select name="levels" id="level-id">
+                <option value="none" selected class="default-option">Random Level</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+            </select>
+            <button class="randomiser-button" title="Toggle Random"><i class="fa-solid fa-dice"></i></button>
+        </div>
+
+        <div id="race" class="input-field">
+            <select name="races" id="race-id">
+                <option value="none" selected class="default-option">Random Race</option>
+                <option value="dragonborn">Dragonborn</option>
+                <option value="dwarf">Dwarf</option>
+                <option value="elf">Elf</option>
+                <option value="gnome">Gnome</option>
+                <option value="half-elf">Half-Elf</option>
+                <option value="half-orc">Half-Orc</option>
+                <option value="halfling">Halfling</option>
+                <option value="human">Human</option>
+                <option value="tiefling">Tiefling</option>
+            </select>
+            <button class="randomiser-button" title="Toggle Random"><i class="fa-solid fa-dice"></i></button>
+        </div>
+
+        <div id="class" class="input-field">
+            <select name="classes" id="class-id">
+                <option value="none" selected class="default-option">Random Class</option>
+                <option value="barbarian">Barbarian</option>
+                <option value="bard">Bard</option>
+                <option value="cleric">Cleric</option>
+                <option value="druid">Druid</option>
+                <option value="fighter">Fighter</option>
+                <option value="monk">Monk</option>
+                <option value="paladin">Paladin</option>
+                <option value="ranger">Ranger</option>
+                <option value="rogue">Rogue</option>
+                <option value="sorcerer">Sorcerer</option>
+                <option value="warlock">Warlock</option>
+                <option value="wizard">Wizard</option>
+            </select>
+            <button class="randomiser-button" title="Toggle Random"><i class="fa-solid fa-dice"></i></button>
+        </div>
+
+        <div id="subclass" class="input-field">
+            <select name="subclasses" id="subclass-id">
+                <option value="none" selected class="default-option">Random Subclass</option>
+                <!-- will need the D&D API to fetch subclass options once a class is chosen -->
+            </select>
+            <button class="randomiser-button" title="Toggle Random"><i class="fa-solid fa-dice"></i></button>
+        </div>
+
+        <div id="background" class="input-field">
+            <select name="backgrounds" id="background-id">
+                <option value="none" selected class="default-option">Random Background</option>
+                <option value="acolyte">Acolyte</option>
+                <option value="charlatan">Charlatan</option>
+                <option value="criminal">Criminal</option>
+                <option value="entertainer">Entertainer</option>
+                <option value="folk-hero">Folk Hero</option>
+                <option value="guild-artisan">Guild Artisan</option>
+                <option value="hermit">Hermit</option>
+                <option value="noble">Noble</option>
+                <option value="outlander">Outlander</option>
+                <option value="sage">Sage</option>
+                <option value="sailor">Sailor</option>
+                <option value="soldier">Soldier</option>
+                <option value="urchin">Urchin</option>
+            </select>
+            <button class="randomiser-button" title="Toggle Random"><i class="fa-solid fa-dice"></i></button>
+        </div>
+
+        <div id="alignment" class="input-field">
+            <select name="alignment" id="alignment-id">
+                <option value="none" selected class="default-option">Random Alignment</option>
+                <option value="lawful-good">Lawful Good</option>
+                <option value="neutral-good">Neutral Good</option>
+                <option value="chaotic-good">Chaotic Good</option>
+                <option value="lawful-neutral">Lawful Neutral</option>
+                <option value="neutral">Neutral</option>
+                <option value="chaotic-neutral">Chaotic Neutral</option>
+                <option value="lawful-evil">Lawful Evil</option>
+                <option value="neutral-evil">Neutral Evil</option>
+                <option value="chaotic-evil">Chaotic Evil</option>
+            </select>
+            <button class="randomiser-button" title="Toggle Random"><i class="fa-solid fa-dice"></i></button>
+        </div>
+
+        <div id="characteristics-container">
+            <h5>Characteristics</h5>
+            <div id="characteristics-trait" class="input-field characteristics">
+                <select name="characteristics-trait" id="characteristics-trait-id">
+                    <option value="none" selected class="default-option">Random Trait</option>
+                    <option value="trait-1" title="I’m driven by a wanderlust that led me away from home.">I’m driven by a
+                        wanderlust that led me away from home.</option>
+                    <option value="trait-2" title="I watch over my friends as if they were a litter of newborn pups.">I
+                        watch over my friends as if they were a litter of newborn pups.</option>
+                    <option value="trait-3"
+                        title="I once ran twenty-five miles without stopping to warn to my clan of an approaching orc horde. I’d do it again if I had to.">
+                        I once ran twenty-five miles without stopping to warn to my clan of an approaching orc horde. I’d do
+                        it again if I had to.</option>
+                    <option value="trait-4" title="I have a lesson for every situation, drawn from observing nature.">I have
+                        a lesson for every situation, drawn from observing nature.</option>
+                    <option value="trait-5"
+                        title="I place no stock in wealthy or well-mannered folk. Money and manners won’t save you from a hungry owlbear.">
+                        I place no stock in wealthy or well-mannered folk. Money and manners won’t save you from a hungry
+                        owlbear.</option>
+                    <option value="trait-6"
+                        title="I’m always picking things up, absently fiddling with them, and sometimes accidentally breaking them.">
+                        I’m always picking things up, absently fiddling with them, and sometimes accidentally breaking them.
+                    </option>
+                    <option value="trait-7" title="I feel far more comfortable around animals than people.">I feel far more
+                        comfortable around animals than people.</option>
+                    <option value="trait-8">I was, in fact, raised by wolves.</option>
+                </select>
+                <button class="randomiser-button" title="Toggle Random"><i class="fa-solid fa-dice"></i></button>
+            </div>
+        </div>
+
+        <div id="characteristics-ideal" class="input-field characteristics">
+            <select name="characteristics-ideal" id="characteristics-ideal-id">
+                <option value="none" selected class="default-option">Random Ideal</option>
+                <option value="ideal-1"
+                    title="(Chaotic) Change. Life is like the seasons, in constant change, and we must change with it.">
+                    (Chaotic) Change. Life is like the seasons, in constant change, and we must change with it.</option>
+                <option value="ideal-2"
+                    title="(Good) Greater Good. It is each person’s responsibility to make the most happiness for the whole tribe.">
+                    (Good) Greater Good. It is each person’s responsibility to make the most happiness for the whole tribe.
+                </option>
+                <option value="ideal-3" title="(Lawful) Honor. If I dishonor myself, I dishonor my whole clan.">(Lawful)
+                    Honor. If I dishonor myself, I dishonor my whole clan.</option>
+                <option value="ideal-4" title="(Evil) Might. The strongest are meant to rule.">(Evil) Might. The strongest
+                    are meant to rule.</option>
+                <option value="ideal-5"
+                    title="(Neutral) Nature. The natural world is more important than all the constructs of civilization.">
+                    (Neutral) Nature. The natural world is more important than all the constructs of civilization.</option>
+                <option value="ideal-6" title="(Any) Glory. I must earn glory in battle, for myself and my clan.">(Any)
+                    Glory. I must earn glory in battle, for myself and my clan.</option>
+            </select>
+            <button class="randomiser-button" title="Toggle Random"><i class="fa-solid fa-dice"></i></button>
+        </div>
+
+        <div id="characteristics-bond" class="input-field characteristics">
+            <select name="characteristics-bond" id="characteristics-bond-id">
+                <option value="none" selected class="default-option">Random Bond</option>
+                <option value="bond-1"
+                    title="My family, clan, or tribe is the most important thing in my life, even when they are far from me.">
+                    My family, clan, or tribe is the most important thing in my life, even when they are far from me.
+                </option>
+                <option value="bond-2" title="An injury to the unspoiled wilderness of my home is an injury to me.">
+                    An injury to the unspoiled wilderness of my home is an injury to me.</option>
+                <option value="bond-3"
+                    title="I will bring terrible wrath down on the evildoers who destroyed my homeland.">I will bring
+                    terrible wrath down on the evildoers who destroyed my homeland.
+                </option>
+                <option value="bond-4"
+                    title="I am the last of my tribe, and it is up to me to ensure their names enter legend.">I am the last
+                    of my tribe, and it is up to me to ensure their names enter legend.
+                </option>
+                <option value="bond-5"
+                    title="I suffer awful visions of a coming disaster and will do anything to prevent it.">I suffer awful
+                    visions of a coming disaster and will do anything to prevent it.
+                </option>
+                <option value="bond-6" title="It is my duty to provide children to sustain my tribe.">It is my duty to
+                    provide children to sustain my tribe.
+                </option>
+            </select>
+            <button class="randomiser-button" title="Toggle Random"><i class="fa-solid fa-dice"></i></button>
+        </div>
+
+        <div id="characteristics-flaw" class="input-field characteristics">
+            <select name="characteristics-flaw" id="characteristics-flaw-id">
+                <option class="flaw-box" value="none" selected class="default-option">Random Flaw</option>
+                <option class="flaw-box" value="flaw-1" title="I am too enamored of ale, wine, and other intoxicants.">I
+                    am too enamored of ale, wine, and other intoxicants.</option>
+                <option class="flaw-box" value="flaw-2"
+                    title="There’s no room for caution in a life lived to the fullest.">There’s no room for caution in a
+                    life lived to the fullest.</option>
+                <option class="flaw-box" value="flaw-3"
+                    title="I remember every insult I’ve received and nurse a silent resentment toward anyone who’s ever wronged me.">
+                    I remember every insult I’ve received and nurse a silent resentment toward anyone who’s ever wronged me.
+                </option>
+                <option class="flaw-box" value="flaw-4"
+                    title="I am slow to trust members of other races, tribes, and societies.">I am slow to trust members of
+                    other races, tribes, and societies.</option>
+                <option class="flaw-box" value="flaw-5" title="Violence is my answer to almost any challenge.">Violence is
+                    my answer to almost any challenge.
+                </option>
+                <option class="flaw-box" value="flaw-6"
+                    title="Don’t expect me to save those who can’t save themselves. It is nature’s way that the strong thrive and the weak perish.">
+                    Don’t expect me to save those who can’t save themselves. It is nature’s way that the strong thrive and
+                    the weak perish.</option>
+            </select>
+            <button class="randomiser-button" title="Toggle Random"><i class="fa-solid fa-dice"></i></button>
+        </div>
+
+        <div id="backstory" class="input-field">
+            <h5>Backstory</h5>
+            <button class="randomiser-button" title="Toggle Random"><i class="fa-solid fa-dice"></i></button>
+            <textarea id="text-area-box" onclick="this.placeholder=''"
+                onblur="this.placeholder='Type your own backstory or leave blank to randomise'"
+                placeholder="Type your own backstory or leave blank to randomise"></textarea>
+        </div>
+    </div>
+</div>
+
+</div> <!-- main-content -->
+</div> <!-- page-container -->
+
+
+<!--
+This script places a badge on your repl's full-browser view back to your repl's cover
+page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+teal, blue, blurple, magenta, pink!
+<script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+-->
+
+<!-- Nav starts here -->
+<div id="toggleIcon" onclick="menuToggle()"></div>
+<div id="menu-overlay">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Dice Roller</a></li>
+        <li><a href="#">About Us</a></li>
+    </ul>
+</div>
+<!-- Nav ends here -->
+
+</body>
+
+</html>

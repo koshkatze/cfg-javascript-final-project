@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>D&D Character Generator</title>
+	<!-- FONTS -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Catamaran&family=Pathway+Extreme:ital,opsz,wght@0,8..144,100;0,8..144,200;0,8..144,300;0,8..144,400;0,8..144,500;0,8..144,600;0,8..144,700;0,8..144,800;0,8..144,900;1,8..144,100;1,8..144,200;1,8..144,300;1,8..144,400;1,8..144,500;1,8..144,600;1,8..144,700;1,8..144,800;1,8..144,900&display=swap"
+		rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+		rel="stylesheet" />
+	<!-- BOOTSTRAP -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+		crossorigin="anonymous"></script>
+	<!-- ICONS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+		integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!-- CSS -->
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<div id="page-container">
+		<div id="main-content">
+			<div id="title">
+				<h1>D&D Character Generator</h1>
+			</div>
+
+			<div class="p-4">
+				<div class="form-group row">
+					<div class="col-9">
+					  <input type="text" id="characterName" class="form-control" oninput="setName(this.value)" placeholder="Character name">
+					</div>
+					<div class="col-3">
+						<button class="btn btn-primary btn-sm mb-3"><i class="fa-solid fa-dice" style="color: #ffffff;"></i></button>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<div class="col-9">
+					    <select class="form-control" id="genders" onchange="setGender(this.value)">
+
+						</select>
+					</div>
+					<div class="col-3">
+						<button class="btn btn-primary btn-sm mb-3" onclick="pickRandomOption('genders', genders)"><i class="fa-solid fa-dice" style="color: #ffffff;"></i></button>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<div class="col-9">
+					    <select class="form-control" id="levels" onchange="setLevel(this.value)">
+
+						</select>
+					</div>
+					<div class="col-3">
+						<button type="submit" class="btn btn-primary btn-sm mb-3" onclick="pickRandomOption('levels', levels)"><i class="fa-solid fa-dice" style="color: #ffffff;"></i></button>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<div class="col-9">
+					    <select class="form-control" id="races" onchange="setRace(this.value)">
+
+						</select>
+					</div>
+					<div class="col-3">
+						<button type="submit" class="btn btn-primary btn-sm mb-3" onclick="pickRandomOption('races', races)"><i class="fa-solid fa-dice" style="color: #ffffff;"></i></button>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<div class="col-9">
+					    <select class="form-control" id="classes" onchange="setClass(this.value)">
+
+						</select>
+					</div>
+					<div class="col-3">
+						<button type="submit" class="btn btn-primary btn-sm mb-3" onclick="pickRandomOption('classes', classes)"><i class="fa-solid fa-dice" style="color: #ffffff;"></i></button>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<div class="col-9">
+					    <select class="form-control" id="backgrounds" onchange="setBackground(this.value)">
+
+						</select>
+					</div>
+					<div class="col-3">
+						<button type="submit" class="btn btn-primary btn-sm mb-3" onclick="pickRandomOption('backgrounds', backgrounds)"><i class="fa-solid fa-dice" style="color: #ffffff;"></i></button>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<div class="col-9">
+					    <select class="form-control" id="alignments" onchange="setAlignment(this.value)">
+
+						</select>
+					</div>
+					<div class="col-3">
+						<button type="submit" class="btn btn-primary btn-sm mb-3" onclick="pickRandomOption('alignments', alignments)"><i class="fa-solid fa-dice" style="color: #ffffff;"></i></button>
+					</div>
+				</div>
+
+			  </form>
+
+		</div> <!-- main-content -->
+	</div> <!-- page-container -->
+
+
+	<!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+	-->
+
+	<!-- Nav starts here -->
+	<div id="toggleIcon" onclick="menuToggle()"></div>
+	<div id="menu-overlay">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Dice Roller</a></li>
+			<li><a href="#">About Us</a></li>
+		</ul>
+	</div>
+	<!-- Nav ends here -->
+
+	<!-- JS -->
+	<script src="script.js"></script>
+</body>
+
+</html>

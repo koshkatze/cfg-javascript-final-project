@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice Roller</title>
+    <!-- JAVASCRIPT -->
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js"></script>
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran&family=Pathway+Extreme:ital,opsz,wght@0,8..144,100;0,8..144,200;0,8..144,300;0,8..144,400;0,8..144,500;0,8..144,600;0,8..144,700;0,8..144,800;0,8..144,900;1,8..144,100;1,8..144,200;1,8..144,300;1,8..144,400;1,8..144,500;1,8..144,600;1,8..144,700;1,8..144,800;1,8..144,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Bellota:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <!-- ICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- CSS -->
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../dice-roller/dice-roller.css" />
+  </head>
+
+  <body>
+    <div id="page-container">
+      <div id="main-content">
+        <div id="title">
+          <h1>D&D Character Generator</h1>
+        </div>
+        <!-- title -->
+
+        <div id="roller-container">
+          <h2>Dice Roller</h2>
+          <div id="dice-container">
+            <button id="d4"><img src="../dice-roller/images/dice/d4.png" /><br />d4</button>
+            <button id="d6"><img src="../dice-roller/images/dice/d6.png" /><br />d6</button>
+            <button id="d8"><img src="../dice-roller/images/dice/d8.png" /><br />d8</button>
+            <button id="d10">
+              <img src="../dice-roller/images/dice/d10.png" /><br />d10
+            </button>
+            <button id="d12">
+              <img src="../dice-roller/images/dice/d12.png" /><br />d12
+            </button>
+            <button id="d20">
+              <img src="../dice-roller/images/dice/d20.png" /><br />d20
+            </button>
+          </div>
+          <!-- dice container -->
+          <div id="you-rolled"><p>You rolled:</p></div>
+          <div id="result"></div>
+          <canvas id="confetti-canvas"> </canvas>
+        </div>
+        <!-- roller-container-->
+      </div>
+      <!-- main-content -->
+    </div>
+    <!-- page-container -->
+
+      <!-- Nav starts here -->
+  	<div id="toggleIcon" onclick="menuToggle()"></div>
+	<div id="menu-overlay">
+		<ul>
+			<li><a href="#">Home</a></li>
+			<li><a href="#">Dice Roller</a></li>
+			<li><a href="#">About Us</a></li>
+		</ul>
+	</div>
+  <!-- Nav ends here -->
+    
+    <script src="../dice-roller/dice-roller.js"></script>
+    <script src="../script.js"></script>
+  </body>
+</html>
