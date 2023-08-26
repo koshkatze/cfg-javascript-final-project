@@ -181,7 +181,7 @@
           type="submit"
           id="submit-character"
           class="btn btn-success btn-sm"
-          onclick=""
+          onclick="generateCharacterSheet()"
         >
           Generate Character Sheet
         </button>
@@ -195,33 +195,33 @@
       </div>
 
       <div id="sheet-name">
-        <div class="sheet-input"></div>
+        <div class="sheet-output" id="sheetOutputName"></div>
         <p>Character name</p>
       </div>
 
       <div class="basic-stats">
         <div class="stat">
-          <div class="sheet-input"></div>
+          <div class="sheet-output" id="sheetOutputLevels"></div>
           <p>Level</p>
         </div>
         <div class="stat">
-          <div class="sheet-input"></div>
+          <div class="sheet-output" id="sheetOutputGenders"></div>
           <p>Gender</p>
         </div>
         <div class="stat">
-          <div class="sheet-input"></div>
+          <div class="sheet-output" id="sheetOutputAlignments"></div>
           <p>Alignment</p>
         </div>
         <div class="stat">
-          <div class="sheet-input"></div>
+          <div class="sheet-output" id="sheetOutputRaces"></div>
           <p>Race</p>
         </div>
         <div class="stat">
-          <div class="sheet-input"></div>
+          <div class="sheet-output" id="sheetOutputClasses"></div>
           <p>Class</p>
         </div>
         <div class="stat">
-          <div class="sheet-input"></div>
+          <div class="sheet-output" id="sheetOutputBackgrounds"></div>
           <p>Background</p>
         </div>
       </div>

@@ -11,6 +11,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  padding-bottom: 10px;
 }
 
 #main-content {
@@ -36,7 +37,7 @@ body {
   margin-right: auto;
   margin-bottom: 2em;
   width: 50%;
-  height: auto;
+  height: min-content;
   position: relative;
 }
 
@@ -52,6 +53,9 @@ body {
 }
 
 @media only screen and (max-width: 576px) {
+  body {
+	padding-top: 3em;
+  }
   #main-content {
     width: 90%;
     min-height: 60%;
@@ -75,11 +79,6 @@ body {
   border: 1px solid #727272;
   border-radius: 50%;
   background-color: #e8e8e8;
-}
-
-#input-fields-container select {
-  width: 80%;
-  margin: auto;
 }
 
 button {
@@ -218,6 +217,8 @@ button {
   margin: 10px;
 }
 
+
+
 #sheet-name p,
 .stat p {
   text-align: center;
@@ -225,12 +226,15 @@ button {
   text-transform: uppercase;
 }
 
-.sheet-input {
+.sheet-output {
   background-color: #ffffff;
   height: 30px;
   width: auto;
   margin: 10px 10px 3px 10px;
-  align-self: self-start;
+  font-family: 'Bellota', sans-serif;
+  text-align: center;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .basic-stats {

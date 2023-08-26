@@ -190,3 +190,21 @@ initialiseSelect("backgrounds", backgrounds, "Background");
 initialiseSelect("alignments", alignments, "Alignment");
 
 // Character sheet JS starts here
+
+function generateCharacterSheet() {
+  const fieldAssociations = [
+    { inputId: 'characterName', outputId: 'sheetOutputName' },
+    { inputId: 'levels', outputId: 'sheetOutputLevels' },
+    { inputId: 'genders', outputId: 'sheetOutputGenders' },
+    { inputId: 'alignments', outputId: 'sheetOutputAlignments' },
+    { inputId: 'races', outputId: 'sheetOutputRaces' },
+    { inputId: 'classes', outputId: 'sheetOutputClasses' },
+    { inputId: 'backgrounds', outputId: 'sheetOutputBackgrounds' }
+  ];
+
+  for (const association of fieldAssociations) {
+    const inputValue = document.getElementById(association.inputId).value;
+    const outputElement = document.getElementById(association.outputId);
+    outputElement.textContent = inputValue;
+  }
+}
