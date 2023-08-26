@@ -126,6 +126,7 @@ let characterLevel = "";
 let characterRace = "";
 let characterClass = "";
 let characterBackground = "";
+let characterAlignment = "";
 
 function setName(newCharacterName) {
   characterName = newCharacterName;
@@ -149,6 +150,10 @@ function setClass(newCharacterClass) {
 
 function setBackground(newCharacterBackground) {
   characterBackground = newCharacterBackground;
+}
+
+function setAlignment(newCharacterAlignment) {
+  characterAlignment = newCharacterAlignment;
 }
 
 function initialiseSelect(selectId, options, prefix = null) {
@@ -207,4 +212,17 @@ function generateCharacterSheet() {
     const outputElement = document.getElementById(association.outputId);
     outputElement.textContent = inputValue;
   }
+}
+
+// Print as a document
+
+function printdiv(elem) {
+  var header_str = '<html><head><title>' + document.title  + '</title></head><body>';
+  var footer_str = '</body></html>';
+  var new_str = document.getElementById(elem).innerHTML;
+  var old_str = document.body.innerHTML;
+  document.body.innerHTML = header_str + new_str + footer_str;
+  window.print();
+  document.body.innerHTML = old_str;
+  return false;
 }
