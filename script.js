@@ -214,7 +214,7 @@ function generateCharacterSheet() {
   }
 }
 
-// Print as a document
+// Print as a document starts here
 
 function printdiv(elem) {
   var header_str = '<html><head><title>' + document.title  + '</title></head><body>';
