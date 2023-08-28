@@ -217,7 +217,8 @@ button {
 #sheet-wide {
   border: 1px solid red;
   background-color: #dfdfdf;
-  height: 70px;
+  height: min-content;
+  min-height: 70px;
   width: auto;
   margin: 10px;
 }
@@ -227,11 +228,13 @@ button {
   text-align: center;
   font-weight: bold;
   text-transform: uppercase;
+  margin: 5px;
 }
 
 .sheet-output {
   background-color: #ffffff;
-  height: 30px;
+  height: min-content;
+  min-height: 30px;
   overflow: auto;
   width: auto;
   margin: 10px 10px 3px 10px;
@@ -257,7 +260,8 @@ button {
   background-color: #dfdfdf;
   border: 1px solid red;
   align-items: center;
-  height: 70px;
+  height: min-content;
+  min-height: 70px;
   text-overflow: clip;
   flex-grow: 1;
 }
