@@ -82,6 +82,7 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min) + min); // The maximum is exclusive and the minimum is inclusive
 }
 
+// Array of possible forenames for characters
 const forenames = [
   "Erevan",
   "Lyra",
@@ -105,6 +106,7 @@ const forenames = [
   "Elysia",
 ];
 
+// Array of possible surnames for characters
 const surnames = [
   "Windrider",
   "Blackthorn",
@@ -128,10 +130,13 @@ const surnames = [
   "Grimhammer",
 ];
 
+// Array of possible genders for characters
 const genders = ["Male", "Female", "Non-binary"];
 
+// Array of possible levels for characters
 const levels = new Array(20).fill(null).map((c, i) => i + 1);
 
+// Array of possible races for characters
 const races = [
   "Dragonborn",
   "Dwarf",
@@ -144,6 +149,7 @@ const races = [
   "Tiefling",
 ];
 
+// Array of possible classes for characters
 const classes = [
   "Barbarian",
   "Bard",
@@ -159,6 +165,7 @@ const classes = [
   "Wizard",
 ];
 
+// Array of possible backgrounds for characters
 const backgrounds = [
   "Acolyte",
   "Charlatan",
@@ -175,6 +182,7 @@ const backgrounds = [
   "Urchin",
 ];
 
+// Array of possible alignments for characters
 const alignments = [
   "Lawful Good",
   "Neutral Good",
