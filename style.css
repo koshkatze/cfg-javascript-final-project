@@ -18,6 +18,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.5);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   margin-top: 2em;
   margin-left: auto;
   margin-right: auto;
@@ -30,6 +31,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.5);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   margin-top: 2em;
   margin-left: auto;
   margin-right: auto;
@@ -70,7 +72,7 @@ body {
 #title h1 {
   margin: 10px;
   text-align: center;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   font-family: "Bellota", cursive;
 }
 
@@ -204,7 +206,7 @@ button {
 /* Nav styles end here */
 
 #avatar {
-  border: 1px solid red;
+  border: 1px solid #dfdfdf;
   background-color: #dfdfdf;
   height: auto;
   width: auto;
@@ -215,7 +217,7 @@ button {
 }
 
 #sheet-wide {
-  border: 1px solid red;
+  border: 1px solid #dfdfdf;
   background-color: #dfdfdf;
   height: min-content;
   min-height: 70px;
@@ -245,7 +247,7 @@ button {
 }
 
 .basic-stats {
-  border: 1px solid purple;
+  /* border: 1px solid purple; */
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
@@ -258,7 +260,7 @@ button {
 .stat {
   flex-basis: calc(33.3% - 7px);
   background-color: #dfdfdf;
-  border: 1px solid red;
+  border: 1px solid #dfdfdf;
   align-items: center;
   height: min-content;
   min-height: 70px;
