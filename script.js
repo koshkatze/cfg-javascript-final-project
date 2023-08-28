@@ -325,3 +325,19 @@ submit_character.addEventListener("click", function() {
 });
 
 // Avatar image ends here
+
+// Randomise all fields of character sheet
+const randomiseAllButton = document.getElementById('randomise-all-button');
+randomiseAllButton.addEventListener('click', randomiseAllFields);
+
+
+function randomiseAllFields() {
+  pickRandomName();
+  pickRandomOption("genders", genders);
+  pickRandomOption("levels", levels);
+  pickRandomOption("races", races);
+  pickRandomOption("classes", classes);
+  pickRandomOption("backgrounds", backgrounds);
+  pickRandomOption("alignments", alignments);
+  generateBackstory();
+}
