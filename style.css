@@ -16,7 +16,6 @@ body {
 
 #main-content {
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border: 5px double #27587c;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.5);
   margin-top: 2em;
@@ -29,7 +28,6 @@ body {
 
 #character-sheet {
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border: 5px double #27587c;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.5);
   margin-top: 2em;
@@ -46,6 +44,7 @@ body {
     width: 80%;
     min-height: 60%;
   }
+
   #character-sheet {
     width: 80%;
     min-height: 60%;
@@ -54,12 +53,14 @@ body {
 
 @media only screen and (max-width: 576px) {
   body {
-	padding-top: 3em;
+    padding-top: 3em;
   }
+
   #main-content {
     width: 90%;
     min-height: 60%;
   }
+
   #character-sheet {
     width: 90%;
     min-height: 60%;
@@ -71,14 +72,6 @@ body {
   text-align: center;
   border: 1px solid green;
   font-family: "Bellota", cursive;
-}
-
-#avatar-img {
-  width: 50px;
-  height: 50px;
-  border: 1px solid #727272;
-  border-radius: 50%;
-  background-color: #e8e8e8;
 }
 
 button {
@@ -207,9 +200,21 @@ button {
   font-size: 32px;
   color: #ffffff;
 }
+
 /* Nav styles end here */
 
-#sheet-name {
+#avatar {
+  border: 1px solid red;
+  background-color: #dfdfdf;
+  height: auto;
+  width: auto;
+  margin: 10px;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+}
+
+#sheet-wide {
   border: 1px solid red;
   background-color: #dfdfdf;
   height: 70px;
@@ -217,9 +222,7 @@ button {
   margin: 10px;
 }
 
-
-
-#sheet-name p,
+#sheet-wide p,
 .stat p {
   text-align: center;
   font-weight: bold;
@@ -229,6 +232,7 @@ button {
 .sheet-output {
   background-color: #ffffff;
   height: 30px;
+  overflow: auto;
   width: auto;
   margin: 10px 10px 3px 10px;
   font-family: 'Bellota', sans-serif;
@@ -258,10 +262,15 @@ button {
   flex-grow: 1;
 }
 
+.stat-backstories {
+  height: min-content;
+  
+}
+
 #print-button {
-	position: absolute;
-	top: 10px;
-	right: 10px;
-	width: auto;
-	border: 1px solid blue;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: auto;
+  border: 1px solid blue;
 }
